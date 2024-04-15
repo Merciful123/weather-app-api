@@ -8,10 +8,12 @@ const PORT = process.env.PORT || 5000;
 // Enable CORS for requests from Vite app
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: [
+      "http://localhost:5173",
+      "https://samurai-weather-app.netlify.app",
+    ],
   })
 );
-
 // Route to fetch data from the provided API endpoint
 app.get("/api/cities", async (req, res) => {
   try {
