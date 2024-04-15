@@ -5,7 +5,7 @@ const axios = require("axios");
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Enable CORS for requests from Vite app
+// Enable CORS for requests from Vite app and frontend from netlify
 app.use(
   cors({
     origin: [
